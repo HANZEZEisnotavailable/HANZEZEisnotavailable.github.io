@@ -41,6 +41,34 @@
             display: block;
         }
 
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    background: transparent;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.header-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.header-title {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: #1a1a1a;
+    line-height: 1;
+}
+          
         @media (max-width: 600px) {
             .promo-images {
                 flex-direction: column;
@@ -169,6 +197,18 @@
 
         /* 响应式设计 */
         @media (max-width: 768px) {
+            .site-header {
+            padding: 16px 20px;
+    }
+
+    .header-title {
+        font-size: 28px;
+    }
+
+    .header-icon {
+        width: 28px;
+        height: 28px;
+    }
             .container {
                 padding: 40px 20px;
             }
@@ -198,6 +238,12 @@
     </style>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <img src="icon.png" alt="icon" class="header-icon">
+            <span class="header-title">eyeworld</span>
+        </div>
+    </header>
     <div class="container">
         <!-- 第一行 -->
         <section class="promo-section">
