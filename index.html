@@ -37,39 +37,39 @@
 
         .promo-images img {
             width: 50%;
-            aspect-ratio: 1 / 1.414; /* A3竖向比例 */
+            aspect-ratio: 1 / 1.414;
             object-fit: cover;
             display: block;
         }
 
-.site-header {
-    width: 100%;
-    padding: 20px 40px;
-    background: transparent;
-}
+        .site-header {
+            width: 100%;
+            padding: 20px 40px;
+            background: transparent;
+        }
 
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-}
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
 
-.header-icon {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
+        .header-icon {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
 
-.header-title {
-    font-size: 36px;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    color: #1a1a1a;
-    line-height: 1;
-}
-          
+        .header-title {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
         @media (max-width: 600px) {
             .promo-images {
                 flex-direction: column;
@@ -121,28 +121,28 @@
             flex: 1;
         }
 
-     .description ul {
-    margin-top: 8px;
-    margin-left: 20px;
-    font-size: 15px;
-    color: #666;
-}
+        .description p {
+            margin-bottom: 4px;
+        }
 
-.description > ul {
-    margin-left: 28px;
-}
+        .description ul {
+            margin-top: 6px;
+            margin-left: 24px;
+        }
 
-.description > ul > li {
-    font-weight: 700;
-    color: #444;
-}
+        .description > ul > li {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
 
-.description ul ul {
-    margin-top: 4px;
-    margin-left: 20px;
-    font-weight: 400;
-    color: #666;
-}
+        .description ul ul {
+            margin-top: 4px;
+            margin-left: 20px;
+            font-weight: 400;
+            color: #666;
+        }
 
         .attributes {
             margin-top: 32px;
@@ -164,7 +164,6 @@
             margin-right: 6px;
         }
 
-          
         /* 第二行 */
         .about-section {
             margin-bottom: 60px;
@@ -207,20 +206,76 @@
             font-size: 14px;
         }
 
+        /* 密码区域 */
+        .password-box {
+            margin-top: 28px;
+            padding: 16px 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        .password-hint {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .password-gate {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .password-gate input {
+            font-size: 15px;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .password-gate input:focus {
+            border-color: #888;
+        }
+
+        .password-gate button {
+            font-size: 15px;
+            padding: 6px 16px;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .password-gate button:hover {
+            background: #444;
+        }
+
+        #pw-error {
+            font-size: 13px;
+            color: #cc0000;
+            width: 100%;
+            margin: 0;
+        }
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .site-header {
-            padding: 16px 20px;
-    }
+                padding: 16px 20px;
+            }
 
-    .header-title {
-        font-size: 28px;
-    }
+            .header-title {
+                font-size: 28px;
+            }
 
-    .header-icon {
-        width: 28px;
-        height: 28px;
-    }
+            .header-icon {
+                width: 28px;
+                height: 28px;
+            }
+
             .container {
                 padding: 40px 20px;
             }
@@ -247,46 +302,6 @@
                 font-size: 16px;
             }
         }
-          .password-gate {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.password-gate input {
-    font-size: 15px;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.password-gate input:focus {
-    border-color: #888;
-}
-
-.password-gate button {
-    font-size: 15px;
-    padding: 6px 16px;
-    background: #1a1a1a;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.password-gate button:hover {
-    background: #444;
-}
-
-#pw-error {
-    font-size: 13px;
-    color: #cc0000;
-    width: 100%;
-    margin: 0;
-}
     </style>
 </head>
 <body>
@@ -306,31 +321,34 @@
         </section>
         <section class="main-section">
             <div class="poster-container">
-                <img src="poster1.jpg"poster">
+                <img src="poster1.jpg" alt="poster">
             </div>
             <div class="info-container">
                 <div>
                     <h1 class="title">短編漫画集「君のままでいい」</h1>
-                     <p class="description">
-                            百合テーマの再録集。<br>
-                            【収録作品】
-                            <ul>
-                                <li>四ページ漫画集
-                                    <ul>
-                                        <li>「君のままでいい」</li>
-                                        <li>「気分転換法」</li>
-                                        <li>「カーテンちゃん」</li>
-                                    </ul>
-                                </li>
-                                <li>「恵味」</li>
-                                <li>「Please don't be non fiction - ネーム original ver.」</li>
-                            </ul>
-                        </p>
+                    <div class="description">
+                        <p>百合テーマの再録集。</p>
+                        <p>【収録作品】</p>
+                        <ul>
+                            <li>四ページ漫画集
+                                <ul>
+                                    <li>「君のままでいい」</li>
+                                    <li>「気分転換法」</li>
+                                    <li>「カーテンちゃん」</li>
+                                </ul>
+                            </li>
+                            <li>「恵味」</li>
+                            <li>「Please don't be non fiction - ネーム original ver.」</li>
+                        </ul>
+                    </div>
+                    <div class="password-box">
+                        <p class="password-hint"おまけ内容を確認するには、「恵味」のカタカナを入力してください。</p>
                         <div class="password-gate">
-    <input type="password" id="pw-input" placeholder="パスワード" />
-    <button onclick="checkPassword()">Enter</button>
-    <p id="pw-error"></p>
-</div>
+                            <input type="password" id="pw-input" placeholder="パスワード" />
+                            <button onclick="checkPassword()">Enter</button>
+                            <p id="pw-error"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="attributes">
                     <span><strong>出展</strong>COMITIA155 そ26b</span>
@@ -344,7 +362,7 @@
 
         <!-- 第二行 -->
         <section class="about-section">
-            <h2 class="section-title">	EyeWorld Archive</h2>
+            <h2 class="section-title">EyeWorld Archive</h2>
             <p class="about-description">準備中です。</p>
             <a href="https://hungry-balaur-43b.notion.site/Contact-242c34c2ea4880539a6ccbc0c088cbde" class="link">contact リンクまとめ</a>
         </section>
@@ -352,34 +370,34 @@
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2026 HANZEZE.All rights reserved. </p>
+        <p>&copy; 2026 HANZEZE.All rights reserved.</p>
     </footer>
-<script>
-    // 禁止右键菜单
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-
-    // 禁止常用快捷键
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && ['s','u','p','a','c'].includes(e.key.toLowerCase())) {
+    <script>
+        // 禁止右键菜单
+        document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-        }
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-    });
+        });
 
-    // 密码跳转
-    function checkPassword() {
-        var input = document.getElementById('pw-input').value;
-        if (input === 'Aa') {
-            window.location.href = 'https://hungry-balaur-43b.notion.site/30ec34c2ea4880c29862fb054d5180c2';
-        } else {
-            document.getElementById('pw-error').textContent = 'パスワードが違います';
-            document.getElementById('pw-input').value = '';
+        // 禁止常用快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && ['s','u','p','a','c'].includes(e.key.toLowerCase())) {
+                e.preventDefault();
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+
+        // 密码跳转
+        function checkPassword() {
+            var input = document.getElementById('pw-input').value;
+            if (input === 'フイウェイ') {
+                window.location.href = 'https://hungry-balaur-43b.notion.site/30ec34c2ea4880c29862fb054d5180c2';
+            } else {
+                document.getElementById('pw-error').textContent = 'パスワードが違います';
+                document.getElementById('pw-input').value = '';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 </html>
